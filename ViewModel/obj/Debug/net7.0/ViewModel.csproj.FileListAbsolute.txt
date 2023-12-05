@@ -1,0 +1,5 @@
+D:\Demmo\ViewModel\obj\Debug\net7.0\ViewModel.csproj.AssemblyReference.cache
+D:\Demmo\ViewModel\obj\Debug\net7.0\ViewModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\Demmo\ViewModel\obj\Debug\net7.0\ViewModel.AssemblyInfoInputs.cache
+D:\Demmo\ViewModel\obj\Debug\net7.0\ViewModel.AssemblyInfo.cs
+D:\Demmo\ViewModel\obj\Debug\net7.0\ViewModel.csproj.CoreCompileInputs.cache

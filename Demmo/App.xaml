@@ -1,0 +1,21 @@
+﻿<!-- 
+    The root element of the application, representing the application itself.
+    x:Class attribute specifies the code-behind class associated with this XAML file.
+-->
+<Application x:Class="Demmo.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Demmo"
+             StartupUri="User_Control/Setup.xaml">
+
+    <!-- 
+        Application-level resources that can be shared across multiple parts of the application.
+    -->
+    <Application.Resources>
+        <!-- 
+            Reference to an external ResourceDictionary that contains common design elements.
+            It is defined in the file "StaticControlResource.xaml" in the "CommonDesign" folder.
+        -->
+        <ResourceDictionary Source="CommonDesign/StaticControlResource.xaml" />
+    </Application.Resources>
+</Application>

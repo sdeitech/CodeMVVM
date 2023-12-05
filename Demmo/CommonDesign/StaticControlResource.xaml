@@ -1,0 +1,146 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+
+    <!--Max Height Row Defination -->
+    <Style x:Key="MaxHeightRowDefination" TargetType="{x:Type RowDefinition}">
+        <Setter Property="Height" Value="*"/>
+    </Style>
+
+    <!--Double Max Height Row Defination -->
+    <Style x:Key="DoubleMaxHeightRowDefination" TargetType="{x:Type RowDefinition}">
+        <Setter Property="Height" Value="2*"/>
+    </Style>
+
+    <!--Auto Height Row Defination -->
+    <Style x:Key="AutoHeightRowDefination" TargetType="{x:Type RowDefinition}">
+        <Setter Property="Height" Value="Auto"/>
+    </Style>
+
+    <!--Minimum Height Row Defination-->
+    <Style x:Key="MinimumHeightRowDefination" TargetType="{x:Type RowDefinition}">
+        <Setter Property="Height" Value="5"/>
+    </Style>
+
+    <!--Std min Row Defination -->
+    <Style x:Key="StdMinimumHeightRowDefination" TargetType="{x:Type RowDefinition}">
+        <Setter Property="Height" Value="3"/>
+    </Style>
+
+    <!--Adjust RowDefination based on wheather custom image exist in the AlaCarte Service or not -->
+    <Style x:Key="AdjustAddImageHeightRowDefination" TargetType="{x:Type RowDefinition}">
+        <Setter Property="Height" Value="{Binding RowHeight}"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding IsImageAvailable}"  Value="True">
+                <Setter Property="Height" Value="{Binding RowHeight}"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Styling resources for Column Definations -->
+
+    <!--Minimum Height Column Defination -->
+    <Style x:Key="MinimumWidthColumnDefination" TargetType="{x:Type ColumnDefinition}">
+        <Setter Property="Width" Value="5"/>
+    </Style>
+
+    <!--Auto Width Column Defination -->
+    <Style x:Key="AutoWidthColumnDefination" TargetType="{x:Type ColumnDefinition}">
+        <Setter Property="Width" Value="Auto"/>
+    </Style>
+
+    <!--Maximum Height Column Defination -->
+    <Style x:Key="MaximunWidthColumnDefination" TargetType="{x:Type ColumnDefinition}">
+        <Setter Property="Width" Value="*"/>
+    </Style>
+    <!--Double Max Height Column Defination -->
+    <Style x:Key="DoubleMaxHeightColumnDefination" TargetType="{x:Type ColumnDefinition}">
+        <Setter Property="Width" Value="2*"/>
+    </Style>
+
+    <SolidColorBrush x:Key="WhiteBrush" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="LightSkyBlueColorBrush"  Color ="#67B9B0"/>
+    <SolidColorBrush x:Key="YellowColorBrush"  Color ="#D3B83C"/>
+    <SolidColorBrush x:Key="DarkestGrayColor" Color="#FF58585A"/>
+    <!-- Navneet-->
+
+    <Style x:Key="RoundSkyBlueButtonStyle1" TargetType="{x:Type Button}">
+        <Setter Property="FontFamily" Value="/Font/#Muller ExtraBold" />
+        <Setter Property="Height" Value="50" />
+        <Setter Property="FontSize" Value="17" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Background" Value="{StaticResource LightSkyBlueColorBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Rectangle Fill="{TemplateBinding Background}"
+                                       RadiusX="14" RadiusY="14" x:Name="Rectangle">
+                            <Rectangle.Effect>
+                                <DropShadowEffect BlurRadius="13" Direction="270"
+                                    ShadowDepth="5" RenderingBias="Performance" Color="#FFD6D6D6" />
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <ContentPresenter Content="{TemplateBinding Content}" VerticalAlignment="Center"
+                            Margin="0,6,0,0" HorizontalAlignment="Center"/>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Grid.Background" Value="{DynamicResource YellowColorBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DarkGrayBackButtonStyle" TargetType="Button">
+        <Setter Property="FontFamily" Value="/Font/#Muller Bold" />
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Width" Value="180"/>
+        <Setter Property="Height" Value="70"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <StackPanel  Background="{TemplateBinding Background}" Orientation="Horizontal">
+                        <Path Stroke="{StaticResource DarkestGrayColor}" VerticalAlignment="Top" HorizontalAlignment="Center" StrokeThickness="4" Stretch="Fill" Height="25" Margin="0,5,0,0">
+                            <Path.Data>
+                                <PathGeometry >
+                                    <PathGeometry.Figures>
+                                        <PathFigure StartPoint="8.2,10">
+                                            <LineSegment Point="18,18"/>
+                                        </PathFigure>
+                                        <PathFigure StartPoint="7.15,11">
+                                            <LineSegment Point="18,0"/>
+                                        </PathFigure>
+                                    </PathGeometry.Figures>
+                                </PathGeometry>
+                            </Path.Data>
+                        </Path>
+                        <TextBlock Text="Back" FontSize="32" Margin="18,5,0,0" HorizontalAlignment="Center"  VerticalAlignment="Top" Foreground="{StaticResource DarkestGrayColor}"/>
+                    </StackPanel>
+
+                    <ControlTemplate.Triggers>
+                        <!--<Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#57575a"/>
+                        </Trigger>-->
+                        <!--<Trigger Property="Button.IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource DarkGrayColor}"/>
+                        </Trigger>-->
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+
+</ResourceDictionary>

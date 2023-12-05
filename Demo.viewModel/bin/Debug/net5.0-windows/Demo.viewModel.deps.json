@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Demo.viewModel/1.0.0": {
+        "dependencies": {
+          "Demmo": "1.0.0"
+        },
+        "runtime": {
+          "Demo.viewModel.dll": {}
+        }
+      },
+      "Demmo/1.0.0": {
+        "runtime": {
+          "Demmo.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Demo.viewModel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Demmo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

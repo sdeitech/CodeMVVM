@@ -1,0 +1,12 @@
+D:\Demmo\ViewModel\bin\Debug\net5.0\ViewModel.deps.json
+D:\Demmo\ViewModel\bin\Debug\net5.0\ViewModel.dll
+D:\Demmo\ViewModel\bin\Debug\net5.0\ref\ViewModel.dll
+D:\Demmo\ViewModel\bin\Debug\net5.0\ViewModel.pdb
+D:\Demmo\ViewModel\obj\Debug\net5.0\ViewModel.csproj.AssemblyReference.cache
+D:\Demmo\ViewModel\obj\Debug\net5.0\ViewModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\Demmo\ViewModel\obj\Debug\net5.0\ViewModel.AssemblyInfoInputs.cache
+D:\Demmo\ViewModel\obj\Debug\net5.0\ViewModel.AssemblyInfo.cs
+D:\Demmo\ViewModel\obj\Debug\net5.0\ViewModel.csproj.CoreCompileInputs.cache
+D:\Demmo\ViewModel\obj\Debug\net5.0\ViewModel.dll
+D:\Demmo\ViewModel\obj\Debug\net5.0\ref\ViewModel.dll
+D:\Demmo\ViewModel\obj\Debug\net5.0\ViewModel.pdb
